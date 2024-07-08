@@ -3,8 +3,8 @@ import { Control, FieldErrors, FieldValues } from "react-hook-form";
 export interface FromRowType {
   id?: number;
   name?: string;
-  price?: number;
-  qty?: number;
+  price?: number | undefined;
+  qty?: number | undefined;
   quantity?: number;
   total?: number;
   product_id: number;
