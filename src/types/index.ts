@@ -55,3 +55,13 @@ export interface IAlert {
   onClose: () => void;
   type: string;
 }
+
+export interface Props {
+  search?: string;
+  limit?: number;
+  offset?: number;
+  page?: number;
+  sort?: string;
+  order?: string;
+}
+[];

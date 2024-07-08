@@ -2,14 +2,16 @@ import { useQuery } from "@tanstack/react-query";
 import { apiAll } from "../lib/axios";
 import { Props } from "@/types";
 
-export const useSale = ({
-  search = "",
-  limit = 10,
-  offset = 0,
-  page = 1,
-  sort = "",
-  order = "",
-}: Props = {}) => {
+export const useSale = (
+  {
+    search = "",
+    limit = 10,
+    offset = 0,
+    page = 1,
+    sort = "",
+    order = "",
+  }: Props = {}!
+) => {
   const { data, isLoading, refetch } = useQuery({
     queryKey: ["saleLimit", page, limit, search, sort, order],
     queryFn: async () => {

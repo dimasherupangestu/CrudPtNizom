@@ -6,9 +6,9 @@ import AlertInfo from "@/components/AlertInfo";
 import { FormInput } from "@/components/FormInput";
 import { FromRowType, IProduct } from "@/types";
 import { useMutation, useQuery } from "@tanstack/react-query";
+import dayjs from "dayjs";
 import { useParams, useRouter } from "next/navigation";
 import React, { useEffect, useState } from "react";
-import dayjs from "dayjs";
 
 const EditPage = () => {
   const { id } = useParams();
@@ -246,7 +246,8 @@ const EditPage = () => {
                           />
                         </td>
                         <td className="px-4 py-4">
-                          {(item.total = item.price * item.quantity)}
+                          {item.total &&
+                            (item.total = item?.price! * item?.quantity!)}
                         </td>
                       </tr>
                     ))}

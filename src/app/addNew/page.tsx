@@ -182,7 +182,9 @@ const AddNewPage = () => {
                             id="product"
                             name="product"
                             value={
-                              data?.data?.find((p) => p.name === item.name)?.id
+                              data?.data?.find!(
+                                (p: FromRowType) => p.name === item.name
+                              )?.id
                             }
                             onChange={(e) =>
                               handleSelectProduct(index, Number(e.target.value))
