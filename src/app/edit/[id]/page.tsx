@@ -246,8 +246,7 @@ const EditPage = () => {
                           />
                         </td>
                         <td className="px-4 py-4">
-                          {item.total &&
-                            (item.total = item?.price! * item?.quantity!)}
+                          {(item.total = item?.price! * item?.quantity!)}
                         </td>
                       </tr>
                     ))}
